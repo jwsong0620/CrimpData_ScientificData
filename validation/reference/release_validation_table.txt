@@ -1,0 +1,20 @@
+Descriptive validation of the six released crimping waveform files
+
+Values use the native export scale; index positions are 1-based, not time.
+Intervals below are medians [25th, 75th percentile] of label-0 records.
+
+Sequence | filename | n(0/1) | value range | zero-tail rows | label-0 peak | peak index | mean/peak | half-peak points
+A | 20230426.csv | 1485 (1484/1) | 0..31170 | 1484 | 30151.5 [29924.5, 30443.0] | 133.0 [133.0, 134.0] | 0.3930 [0.3882, 0.3987] | 71.0 [70.0, 73.0]
+B | 20230427.csv | 1026 (1024/2) | 0..36846 | 167 | 36103.5 [35916.8, 36266.5] | 133.0 [133.0, 134.0] | 0.4357 [0.4327, 0.4393] | 83.0 [82.0, 84.0]
+C | 20230428.csv | 2956 (2946/10) | 0..35203 | 2946 | 29963.0 [29764.0, 30158.0] | 134.0 [134.0, 134.0] | 0.3900 [0.3865, 0.3932] | 70.0 [70.0, 71.0]
+D | 20230503.csv | 1207 (1199/8) | 0..25613 | 420 | 23925.0 [23589.0, 24282.0] | 139.0 [139.0, 140.0] | 0.3701 [0.3679, 0.3722] | 68.0 [68.0, 69.0]
+E | 20230504.csv | 1288 (1288/0) | 0..50192 | 604 | 48546.0 [48278.8, 48795.2] | 121.0 [121.0, 122.0] | 0.4593 [0.4573, 0.4617] | 92.0 [92.0, 93.0]
+F | 20230505.csv | 1867 (1862/5) | 0..27746 | 1108 | 15078.0 [14886.0, 15311.8] | 135.0 [135.0, 136.0] | 0.3493 [0.3480, 0.3506] | 62.0 [62.0, 63.0]
+
+Total: 9829 records; 1965800 finite values; labels {'0': 9803, '1': 26}.
+Noninteger values: 0; negative values: 0; all-zero rows: 0; constant rows: 0.
+Trailing-zero rows: 6729; exact duplicate extra rows: 0.
+Saturation is not established: ADC range, calibration and saturation flags are unavailable.
+Peak ties and zero portions are retained observations, not proof of clipping, padding or a defect mechanism.
+Descriptive differences between sequence_ids do not identify their physical cause or imply a production-wide defect rate.
+Input SHA-256 hashes were unchanged after the read-only audit.

@@ -1,0 +1,28 @@
+Industrial crimping waveforms across five wire gauges with naturally occurring defects and signal drift
+
+This dataset contains 9,829 crimping waveforms from six routine production
+sequences at Sungchangsa Co., Ltd., South Korea. The sequences cover 14, 16, 18,
+20 and 22 AWG wires and contain 9,803 CFM-accepted and 26 CFM-rejected operations.
+No defects were deliberately introduced. Production personnel inspected flagged
+products and reported defects; record-specific inspection coverage and criteria
+are not available. Labels therefore represent operational CFM decisions.
+
+Each CSV contains 200 ordered waveform columns and a label column (0 accepted,
+1 rejected). Original signal values and retained operation order are preserved.
+Filename dates identify the sequences; they are not verified acquisition dates.
+Values use the native export scale rather than calibrated force or elapsed time.
+
+The package includes production metadata, a data dictionary, retained-to-source
+row correspondence, file checksums, validation reports and Python scripts for
+integrity checks, safe trimming, mapped reconstruction and waveform/drift figures.
+The complete instrument exports are not included. Independent source matching
+and Figure 2 reproduction require separately authorized source files; the
+author-produced source report does not replace access to them. Figures 3 and 4
+can be reproduced from the six included CSVs.
+
+Data, metadata, documentation and derived outputs are licensed under CC BY 4.0.
+Python scripts under scripts/ are separately licensed under MIT. Full licence
+texts and scope are included. Dataset creators: Jinwoo Song and Heung Soo Kim.
+Production data provider: Sungchangsa Co., Ltd.
+
+Version: 1.0.0. Please cite the version-specific DOI assigned to this record.

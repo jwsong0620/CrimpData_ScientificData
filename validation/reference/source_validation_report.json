@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "records_checked": 9829,
+    "values_checked": 1965800,
+    "missing_or_nonfinite_source_values": 0,
+    "waveform_mismatches": 0,
+    "label_mismatches": 0,
+    "metadata_mismatches": 0,
+    "source_order_violations": 0,
+    "maximum_absolute_difference": 0.0
+  },
+  "source_files": [
+    {
+      "filename": "20230426083405.csv",
+      "sha256": "25c368e211e3ebb6b0af80ccfd8c437c2a663cf3ffd465945c55156777b3f6c2"
+    },
+    {
+      "filename": "20230428114453.csv",
+      "sha256": "6d291bd0aa62f69b572fbd7b8e7124e525416e763ffc7df46f656a304f662a6e"
+    },
+    {
+      "filename": "20230428140329.csv",
+      "sha256": "8ecb72652ca4c68b920b79edd1373491bc929758d9e2745134fbcdf332965c5f"
+    },
+    {
+      "filename": "20230504080159.csv",
+      "sha256": "f0218b7970e211b1cdb5b807265812f79ea858b80658ad6d4ccec32c11580760"
+    },
+    {
+      "filename": "20230508080125.csv",
+      "sha256": "2fbbbc3ff1ddb4327de9432f88548e82bc4cdbaa0b7fcf371f57d016e52feddc"
+    }
+  ],
+  "interpretation": "Checks correspondence at supplied mapped positions and reconstructed CFM-counter agreement. It does not recover selection reasons, certify physical defect truth, or independently search every potential source file.",
+  "access_scope": "Author-side validation against locally prepared redacted exports. Source inputs are not included in the public repository; independent source matching requires separate authorized access."
+}

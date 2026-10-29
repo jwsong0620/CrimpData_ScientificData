@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this dataset and acknowledge Sungchangsa Co., Ltd. as the production data provider. A DOI will be added after deposition."
+type: dataset
+title: "Industrial crimping waveforms across five wire gauges with naturally occurring defects and signal drift"
+version: 1.0.0
+authors:
+  - family-names: Song
+    given-names: Jinwoo
+    affiliation: Dongguk University
+  - family-names: Kim
+    given-names: Heung Soo
+    affiliation: Dongguk University
+license: CC-BY-4.0
+keywords:
+  - wire harness
+  - crimping
+  - manufacturing
+  - quality monitoring
+  - waveform drift
+  - rare defects
+abstract: "Six routine production sequences contain 9,829 crimping waveforms across five wire gauges, including 9,803 CFM-accepted and 26 CFM-rejected operations. Each waveform contains 200 ordered measurement points. Supporting code validates data integrity and generates descriptive figures. Python scripts are separately licensed under MIT."

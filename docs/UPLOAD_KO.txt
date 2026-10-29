@@ -1,0 +1,95 @@
+GitHub와 Zenodo 업로드 안내
+확인일: 2026-10-29
+
+권장 방식
+GitHub에는 데이터·코드·설명을 올리고, 동일한 공개 묶음을 Zenodo Dataset으로
+보존해 DOI를 받습니다. Scientific Data가 특정 저장소나 이 폴더 구조를
+지정한 것은 아닙니다. 공식 지침과 논문 사례는 deposition.md에 정리했습니다.
+
+1. GitHub 저장소 생성
+GitHub에 로그인하고 New repository를 선택합니다.
+제안 이름: 261029_CrimpData_ScientificData
+공개 시점에 맞게 Private 또는 Public을 선택합니다.
+README, .gitignore, License 자동 생성은 선택하지 않습니다. 이미 로컬에 있습니다.
+GitHub Desktop을 쓴다면 File > Add local repository에서 이 폴더를 선택한 후
+변경사항을 커밋하고 Publish repository를 사용할 수도 있습니다.
+
+2. PowerShell에서 업로드
+아래 경로 자리에는 현재 저장소 폴더를 넣습니다. 이 폴더는 main 브랜치로
+git init만 준비되어 있으며, commit과 원격 업로드는 사용자가 진행합니다.
+
+Set-Location "저장소_폴더_경로"
+git status --short
+git add .
+git diff --cached --stat
+git commit -m "Prepare crimping production dataset and reproducibility code"
+git remote add origin "GitHub에서_복사한_새_저장소_HTTPS_URL"
+git push -u origin main
+
+Git이 이름/이메일 설정을 요구할 때에만, 본인의 정보를 해당 저장소에 설정합니다.
+git config user.name "본인 이름"
+git config user.email "본인 GitHub 이메일 또는 noreply 이메일"
+그런 다음 commit 명령부터 다시 진행합니다. 인증 창이 열리면 GitHub로 로그인합니다.
+
+3. 공개 파일 확인
+업로드 대상: data, metadata, scripts, docs, licenses, validation/reference,
+figures/reference와 최상위 README, LICENSE, CITATION.cff, requirements.txt 등입니다.
+옆의 *_LOCAL_ONLY 폴더는 이 저장소 바깥에 있으며 업로드 대상이 아닙니다.
+그 안에는 6개 공개 파일 밖의 공정까지 포함한 원본 검증용 사본이 있습니다.
+원본 검증 자료의 배포 범위가 확정되기 전에는 공개 저장소로 옮기지 마세요.
+dist, 실행 중 생성되는 결과, 가상환경, Word 원고도 Git 업로드에서 제외됩니다.
+
+4. 검증과 Zenodo 업로드 ZIP
+Python이 설치되어 있으면 저장소 폴더에서 실행합니다.
+Windows에서 python 명령이 없다면 py로 바꿔 실행할 수 있습니다.
+
+python scripts/run_checks.py
+python scripts/build_archive.py
+
+dist/crimp-production-data-v1.0.0.zip이 생성됩니다.
+같은 폴더의 .sha256 파일은 ZIP의 체크섬입니다.
+공개 데이터 검사는 성공하고 원본 비교는 not_run으로 표시되는 것이 기본 동작입니다.
+이것은 오류가 아니라 원본 파일이 공개 묶음에 없다는 뜻입니다.
+원본까지 검사하려면 docs/source_access.md의 --source-dir 방법을 사용합니다.
+
+5. Zenodo에 Dataset 등록
+https://zenodo.org 에 로그인 → + → New upload.
+Resource type은 Dataset을 선택합니다.
+Title: Industrial crimping waveforms across five wire gauges with naturally occurring defects and signal drift
+Creators: Jinwoo Song, Heung Soo Kim (현재 원고 순서; 최종 저자·ORCID를 확인).
+Description은 docs/zenodo_description.txt를 사용할 수 있습니다.
+Version: 1.0.0
+License: 데이터 CC BY 4.0. 설명에서 scripts/는 MIT임을 명시합니다.
+GitHub 저장소 URL을 관련 링크에 넣습니다.
+이 자료 자체의 DOI가 아직 없다면 새 DOI를 예약합니다. 다른 논문의 DOI를 쓰지 않습니다.
+예약한 DOI는 실제 Publish 전까지 등록·활성화되지 않습니다.
+
+예약 후 CITATION.cff에 doi: "예약된 DOI"를 추가하고,
+metadata/release.json의 doi 및 repository_url을 채웁니다.
+원고의 DOI·코드 주소도 같은 값으로 맞춥니다.
+변경사항을 저장한 뒤 build_archive.py를 다시 실행하고, 그 ZIP을 업로드합니다.
+원한다면 README도 별도 첨부하여 ZIP을 받기 전에 내용을 볼 수 있게 합니다.
+
+심사 전 비공개로 두려면 Save draft 후 Share의 링크 공유에서 초안 미리보기 권한을
+사용합니다. 로그인하지 않은 창에서 실제 다운로드가 되는지 확인합니다.
+비밀 심사 링크는 원고/커버레터에만 넣고 공개 Git에 넣지 않습니다.
+원본 검증 자료에 대한 접근도 필요하다면 허용된 자료 범위로 별도 심사 공유를 마련합니다.
+
+공개할 준비가 되면 Publish를 누릅니다. 공개일은 실제 공개한 날짜로 지정하고,
+DOI가 열리는지 확인한 후 원고 Data Availability와 Code Availability를 확정합니다.
+이번 데이터·코드 묶음은 하나의 Dataset DOI로 인용할 수 있습니다.
+버전 변경은 Zenodo의 새 버전 기능으로 관리합니다.
+
+6. GitHub의 동일 버전 보존
+DOI/URL 등 최종 메타데이터 변경을 commit하고 push합니다.
+GitHub Releases에서 tag v1.0.0의 릴리스를 만들고 설명에 Zenodo DOI를 넣습니다.
+필요하면 동일한 dist ZIP을 release asset으로 첨부합니다.
+여기서는 Zenodo에 수동 Dataset 등록을 사용하므로 GitHub 자동 연동까지 켜서
+동일 자료에 별도 소프트웨어 DOI가 중복 생성되지 않도록 합니다.
+
+공식 매뉴얼
+Scientific Data: https://www.nature.com/sdata/policies/repositories
+코드 정책: https://www.nature.com/sdata/policies/editorial-and-publishing-policies
+GitHub 업로드: https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
+Zenodo 업로드: https://help.zenodo.org/docs/deposit/create-new-upload/
+Zenodo 심사 링크: https://help.zenodo.org/docs/share/link-sharing/

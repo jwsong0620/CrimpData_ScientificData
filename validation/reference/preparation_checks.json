@@ -1,0 +1,24 @@
+{
+  "checked_date": "2026-10-29",
+  "public_records": 9829,
+  "public_signal_values": 1965800,
+  "normal": 9803,
+  "abnormal": 26,
+  "numeric_reconstruction_equal": true,
+  "source_comparison": {
+    "records_checked": 9829,
+    "values_checked": 1965800,
+    "missing_or_nonfinite_source_values": 0,
+    "waveform_mismatches": 0,
+    "label_mismatches": 0,
+    "metadata_mismatches": 0,
+    "source_order_violations": 0,
+    "maximum_absolute_difference": 0.0
+  },
+  "source_access": "Local only; not part of the public package.",
+  "safe_trimming": "Five redacted exports processed without input changes or output cleanup.",
+  "generated_figures": [
+    "figure3_waveforms.png",
+    "figure4_gauge_drift.png"
+  ]
+}

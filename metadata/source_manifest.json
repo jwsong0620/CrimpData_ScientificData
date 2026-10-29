@@ -1,0 +1,36 @@
+{
+  "scope": "Original source identifiers for the author-side correspondence checks. Source files are not included in this public repository.",
+  "sources": [
+    {
+      "filename": "20230426083405.csv",
+      "original_sha256": "224f66ea9554aee73a78eedd68304d90d0cdf0888bcaf8a1cad33b257f58a73d",
+      "redacted_sha256": "25c368e211e3ebb6b0af80ccfd8c437c2a663cf3ffd465945c55156777b3f6c2",
+      "data_rows": 4034
+    },
+    {
+      "filename": "20230428114453.csv",
+      "original_sha256": "d19ce341283f0a3dcc1002c1ea9766de3673c8ccbf45bafb85e5f74fd4e0d3fe",
+      "redacted_sha256": "6d291bd0aa62f69b572fbd7b8e7124e525416e763ffc7df46f656a304f662a6e",
+      "data_rows": 4012
+    },
+    {
+      "filename": "20230428140329.csv",
+      "original_sha256": "6b52d7cdd55b8a6201c16c44853b6efdda1857f7178850bbba40703b37b70f68",
+      "redacted_sha256": "8ecb72652ca4c68b920b79edd1373491bc929758d9e2745134fbcdf332965c5f",
+      "data_rows": 5926
+    },
+    {
+      "filename": "20230504080159.csv",
+      "original_sha256": "0bb5ae8957ec45d4cdd69644accb16223dca93c853a3301590fc39566d90ef39",
+      "redacted_sha256": "f0218b7970e211b1cdb5b807265812f79ea858b80658ad6d4ccec32c11580760",
+      "data_rows": 8104
+    },
+    {
+      "filename": "20230508080125.csv",
+      "original_sha256": "3472ea35aeb9d6b07cb52f42d8e5aea7bb8e74fee75bca6f02aeefae88083264",
+      "redacted_sha256": "2fbbbc3ff1ddb4327de9432f88548e82bc4cdbaa0b7fcf371f57d016e52feddc",
+      "data_rows": 3750
+    }
+  ],
+  "access": "Reviewer source access has not yet been arranged. A local original-to-redacted field comparison was performed by the authors. The published manifest and reports do not independently establish source authenticity."
+}

@@ -1,0 +1,27 @@
+field,location,definition
+data1...data200,Released CSV,Numerically ordered waveform values; native export scale; no verified physical coordinate or calibration.
+label,Released CSV,"0 CFM accepted, 1 CFM rejected; no record-level independent inspection result encoded."
+record_id,Companion CSVs,Original filename plus colon plus one-based data row excluding header.
+sequence_id,Companion CSVs,A-F identifiers in release file order; not independently documented product or lot.
+filename / row_index,Correspondence and descriptors,Released filename and one-based operation position among retained rows.
+source_filename,Correspondence,Original instrument export filename; no absolute local path included.
+source_data_record_one_based,Correspondence,Source row counting data records only; upper/reference then lower/measurement.
+source_csv_line_one_based,Correspondence,"Physical source CSV line, including preamble and header; points to lower measurement row."
+metadata_csv_line_one_based,Correspondence,Physical source line holding paired upper-row metadata.
+timestamp,Correspondence,Unmodified source Date/Time string; not a within-waveform time axis.
+good_counter / bad_counter,Correspondence,Unmodified associated upper-row monitoring counters.
+source_weight_unit,Correspondence,Source field reports mV; conversion of waveform integers to calibrated voltage not verified.
+Meas / Meas time mode / Trigger / Trigger Level / Alignment / Adaptive / Teach Sample,Correspondence,Native metadata strings. Meas is automatically determined measurement duration in ms; Trigger Level is the acquisition-start voltage threshold in mV for Auto mode. Alignment OFF and Adaptive ON apply to all retained rows. No waveform calibration or sampling interval is inferred.
+additional_reference_matches,Correspondence,Number of matching reference rows beyond the unique measurement match in inspected source collection.
+peak_value,Descriptors,Maximum of the 200 values in native export scale.
+peak_index,Descriptors,One-based first position attaining peak_value; tied maxima use the earliest point.
+trailing_zero_count,Descriptors,Number of consecutive exact zero values at the end of the vector.
+all_zero / constant,Descriptors,Boolean signal-integrity diagnostics; not physical defect or saturation classifications.
+wire_gauge_awg,Production context and drift descriptors,"Nominal American Wire Gauge supplied by the author for the identified production sequence; A/C 18, B 16, D 20, E 14, F 22."
+terminal_manufacturer,Production context,"Korea Electric Terminal Co., Ltd.; confidential terminal product codes are not included."
+reference_record_id,Drift descriptors,First CFM-accepted retained record in the same file; fixed reference for descriptive L1 deviation.
+l1_distance_native,Drift descriptors,"Sum of absolute differences over the 200 points from the fixed reference, on the native export scale."
+relative_l1_percent,Drift descriptors,100 times absolute L1 deviation divided by the sum of the fixed reference values.
+reference_l1_norm_native,Drift descriptors,Sum of absolute values of the fixed reference waveform; denominator for relative L1 distance.
+peak_value_native,Drift descriptors,Maximum waveform value; identical definition to peak_value in the release-validation descriptors.
+trailing_100_rows_label0_median_relative_l1_percent,Drift descriptors,"At each retained row i, median relative L1 percent of label-0 records in positions max(1,i-99) through i; includes current record only if label 0."

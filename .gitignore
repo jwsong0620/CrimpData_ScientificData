@@ -1,0 +1,17 @@
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+/.env
+/.env.*
+/local_only/
+/source_evidence/
+/raw/
+/dist/
+/validation/rerun/
+/figures/generated/
+*.docx
+*.pdf
+*.zip
+Thumbs.db
+.DS_Store

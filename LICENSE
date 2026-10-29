@@ -1,0 +1,17 @@
+Licensing scope
+
+The six dataset CSVs, metadata, documentation and derived validation/figure
+outputs in this repository are licensed under Creative Commons Attribution
+4.0 International (CC BY 4.0). Full text: licenses/CC-BY-4.0.txt.
+
+The Python source files under scripts/ are licensed under the MIT License.
+Full text: licenses/MIT.txt.
+
+Data creators: Jinwoo Song and Heung Soo Kim.
+Production data provider: Sungchangsa Co., Ltd., South Korea.
+Please attribute the dataset creators and the data provider and identify any changes.
+The dataset DOI will be added when assigned; see CITATION.cff.
+
+These declarations apply only to the included files. Original instrument
+exports, separate local review materials, third-party manuals and third-party
+software dependencies are not relicensed by this repository.

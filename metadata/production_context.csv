@@ -1,0 +1,7 @@
+filename,wire_gauge_awg,terminal_manufacturer,metadata_source,sequence_id,press_model,monitor_model,sensor_model,sensor_mount,terminal_applicator_pairing_note
+20230426.csv,18,"Korea Electric Terminal Co., Ltd.",author-provided production context,A,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,same pairing as the other 18 AWG sequence
+20230427.csv,16,"Korea Electric Terminal Co., Ltd.",author-provided production context,B,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,selected for the production job; identity not disclosed
+20230428.csv,18,"Korea Electric Terminal Co., Ltd.",author-provided production context,C,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,same pairing as the other 18 AWG sequence
+20230503.csv,20,"Korea Electric Terminal Co., Ltd.",author-provided production context,D,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,selected for the production job; identity not disclosed
+20230504.csv,14,"Korea Electric Terminal Co., Ltd.",author-provided production context,E,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,selected for the production job; identity not disclosed
+20230505.csv,22,"Korea Electric Terminal Co., Ltd.",author-provided production context,F,JYP-P700,True Soltec CFM-Lite,PSS50,press frame beside applicator,selected for the production job; identity not disclosed
